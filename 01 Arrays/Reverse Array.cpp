@@ -10,6 +10,7 @@
 using namespace std;
 void printArray(int arr[], int n);
 void reverseArray(int[], int);
+void reverseArrayUsingRecursion(int[], int, int);
 void swap(int &a, int &b);
 int main()
 {
@@ -23,7 +24,8 @@ int main()
         cin >> arr[i];
     }
     cout << "After Reversing \n";
-    reverseArray(arr, n - 1);
+    // reverseArray(arr, n - 1);
+    reverseArrayUsingRecursion(arr, 0, n - 1);
     printArray(arr, n);
     return 0;
 }
@@ -39,10 +41,6 @@ void printArray(int arr[], int n)
 // For reversing an array
 void reverseArray(int arr[], int n)
 {
-    // for (int i = 0; i < n / 2; i++)
-    // {
-    //     swap(arr[i], arr[n - i]);
-    // }
     int start = 0;
     while (start < n)
     {
@@ -50,6 +48,14 @@ void reverseArray(int arr[], int n)
         start++;
         n--;
     }
+}
+// For reversing an array using recursion
+void reverseArrayUsingRecursion(int arr[], int start, int end)
+{
+    if (start > end)
+        return;
+    swap(arr[start], arr[end]);
+    reverseArrayUsingRecursion(arr, start + 1, end - 1);
 }
 
 void swap(int &a, int &b)
@@ -59,8 +65,3 @@ void swap(int &a, int &b)
     a = b;
     b = temp;
 }
-
-// 3 0
-
-// 0 3
-// 1 2

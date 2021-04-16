@@ -1,3 +1,11 @@
+// Maximum and minimum of an array
+
+// Input  : arr[] = {1, 258, 3000}
+// Minimum element is 1
+// Maximum element is 3000
+
+// Reference: https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/
+
 #include <iostream>
 using namespace std;
 

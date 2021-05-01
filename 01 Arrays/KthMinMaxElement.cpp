@@ -4,7 +4,7 @@
 // arr[] = 7 10 4 3 20 15
 // K = 3
 // Output : 7
-
+// Reference : https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/
 #include <iostream>
 #include <algorithm>
 using namespace std;
